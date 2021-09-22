@@ -1,0 +1,51 @@
+.popper-container {
+    .popcorn {
+        &:hover, &.active {
+            circle {
+                fill: #7DC131;
+            }
+        }
+    }
+    .tooltip {
+        margin-left: 40px !important;
+        visibility: hidden;
+        &.show {
+            visibility: visible;
+            z-index: 50;
+        }
+        .tooltip-wrap {
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            background-color: #fff;
+            min-width: 565px;
+            max-width: 565px;
+            padding: 40px;
+            border: 1px solid #EEEEEE;
+            font-size: 12px;
+            font-weight: 300;
+            p {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .popper-arrow {
+            &:before {
+                content: '';
+                position: absolute;
+                top: calc(50% - 40px / 2);
+                left: calc(0% - 40px / 2);
+                width: 40px;
+                height: 40px;
+                transform: rotate(45deg);
+                border-width: 0px 0px 1px 1px;
+                border-style: solid;
+                border-color: #EEEEEE;
+                border-radius: 0px 0px 0px 5px;
+                background-color: #fff;
+                box-shadow:  -1px 2px 2px -1px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}

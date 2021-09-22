@@ -1,0 +1,20 @@
+title = "Видеокарты"
+url = "/catalog/category"
+layout = "default"
+==
+function onStart() {
+    $this->addJs(mix('js/catalog-category.js', 'themes/bizmark/assets'));
+}
+==
+{% set links = [
+    {
+        title: 'Каталог',
+        url: 'catalog/categories'|page
+    }
+] %}
+
+{% partial 'element/breadcrumbs' links=links %}
+{% partial 'element/page-title'
+    text = this.page.title
+%}
+{% partial 'pages/catalog/category' %}

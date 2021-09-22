@@ -1,0 +1,8 @@
+{
+    "name": "lovata/viewedproductsshopaholic-plugin",
+    "type": "october-plugin",
+    "description": "Adds the ability to get a list of viewed products",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

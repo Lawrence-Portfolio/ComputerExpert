@@ -1,0 +1,11 @@
+footer {
+    border-top: 38px solid #ACD57A;
+    ul {
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

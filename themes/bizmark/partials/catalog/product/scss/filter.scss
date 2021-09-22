@@ -1,0 +1,110 @@
+.filter-form {
+    #input-min-value, #input-max-value {
+        padding: 5px;
+        text-align: center;
+        width: 100px;
+        height: 38px;
+        color: #000;
+        font-size: 14px;
+        border: 1px solid #E3EDFF;
+        border-radius: 2px;
+        &::placeholder {
+            color: #000;
+        }
+    }
+
+    .btn-show-category {
+        left: 100%;
+        display: none;
+        width: 140px;
+        height: 38px;
+        z-index: 10;
+        &.show {
+            display: block;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: calc(50% - 20px / 2);
+            width: 19px;
+            height: 19px;
+            background-color: inherit;
+            transform: rotate(45deg);
+        }
+    }
+
+    .radio-group {
+        &.hidden-group {
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+    }
+    .price-range-wrap {
+        .noUi-horizontal {
+            height: 3px;
+            .noUi-handle {
+                width: 18px;
+                height: 18px;
+                right: -9px;
+                top: calc(50% - 16px / 2);
+            }
+        }
+        .noUi-target {
+            border: none;
+            box-shadow: none;
+            background-color: #C4C4C4;
+        }
+        .noUi-connect {
+            background-color: #133FE3;
+        }
+        .noUi-handle {
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+            border: none;
+            background-color: #3C65FF;
+            border-radius: 50%;
+            &:after {
+                display: none;
+            }
+            &:before {
+                left: 4px;
+                top: 4px;
+                width: 10px;
+                height: 10px;
+                background-color: #E3EDFF;
+                border-radius: 50%;
+            }
+        }
+    }
+    .filter-container {
+        .filter-item {
+            &:not(.active) {
+                .item-body {
+                    display: none;
+                }
+            }
+            &.active {
+                .item-trigger {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+    }
+    button[type="submit"], button[type="reset"] {
+        font-weight: 700;
+    }
+    button[type="reset"] {
+        color: #333333;
+        background-color: #F2F2F2;
+        &:hover {
+            background-color: #F2F2F2;
+            filter: brightness(0.9);
+        }
+    }
+}
+

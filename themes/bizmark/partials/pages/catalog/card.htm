@@ -1,0 +1,269 @@
+{% set rating = 4 %}
+<section>
+    <div class="container">
+        <div class="flex items-center border-b border-border pb-25 mb-30">
+            <span class="mr-50">Код товара: 4767613</span>
+            <div class="flex items-center mr-95">
+                <div class="flex items-center mr-30">
+                    {% for i in 1..5 %}
+                        <div class="mr-10 -mt-5">
+                            {% if i <= rating %}
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.5598 20.9873C15.3999 20.988 15.2421 20.947 15.0998 20.8676L9.99979 17.961L4.89979 20.8676C4.56192 21.061 4.15238 21.0281 3.84422 20.7829C3.53605 20.5377 3.38302 20.1228 3.44979 19.7137L4.44979 13.5848L0.329788 9.23037C0.0678446 8.94581 -0.0283273 8.52704 0.0797883 8.14177C0.198032 7.74706 0.512211 7.45994 0.889788 7.40151L6.58979 6.49797L9.09979 0.913411C9.26688 0.537852 9.61647 0.299316 9.99979 0.299316C10.3831 0.299316 10.7327 0.537852 10.8998 0.913411L13.4398 6.48708L19.1398 7.39063C19.5174 7.44905 19.8315 7.73618 19.9498 8.13088C20.0579 8.51615 19.9617 8.93493 19.6998 9.21949L15.5798 13.5739L16.5798 19.7028C16.6527 20.1195 16.4966 20.5444 16.1798 20.7914C15.9987 20.9295 15.7807 20.9984 15.5598 20.9873Z" fill="#96CD59"/>
+                                </svg>
+                            {% else %}
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.5598 20.9873C15.3999 20.988 15.2421 20.947 15.0998 20.8676L9.99979 17.961L4.89979 20.8676C4.56192 21.061 4.15238 21.0281 3.84422 20.7829C3.53605 20.5377 3.38302 20.1228 3.44979 19.7137L4.44979 13.5848L0.329788 9.23037C0.0678446 8.94581 -0.0283273 8.52704 0.0797883 8.14177C0.198032 7.74706 0.512211 7.45994 0.889788 7.40151L6.58979 6.49797L9.09979 0.913411C9.26688 0.537852 9.61647 0.299316 9.99979 0.299316C10.3831 0.299316 10.7327 0.537852 10.8998 0.913411L13.4398 6.48708L19.1398 7.39063C19.5174 7.44905 19.8315 7.73618 19.9498 8.13088C20.0579 8.51615 19.9617 8.93493 19.6998 9.21949L15.5798 13.5739L16.5798 19.7028C16.6527 20.1195 16.4966 20.5444 16.1798 20.7914C15.9987 20.9295 15.7807 20.9984 15.5598 20.9873Z" fill="#C4C4C4"/>
+                                </svg>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <span>231 отзыв</span>
+            </div>
+            <a class="flex items-center" href="#">
+                Добавить в конфигуратор ПК
+                <svg class="ml-15" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect opacity="0.01" width="24" height="24" fill="#1A1A1A"/>
+                    <path d="M20 11C19.4477 11 19 11.4477 19 12V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5H12C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3H6C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V12C21 11.4477 20.5523 11 20 11Z" fill="#1A1A1A"/>
+                    <path d="M15.9999 5H17.5799L11.2899 11.28C11.1006 11.4678 10.9941 11.7234 10.9941 11.99C10.9941 12.2566 11.1006 12.5122 11.2899 12.7C11.4777 12.8893 11.7333 12.9958 11.9999 12.9958C12.2666 12.9958 12.5222 12.8893 12.7099 12.7L18.9999 6.42V8C18.9999 8.55228 19.4477 9 19.9999 9C20.5522 9 20.9999 8.55228 20.9999 8V4C20.9999 3.44772 20.5522 3 19.9999 3H15.9999C15.4477 3 14.9999 3.44772 14.9999 4C14.9999 4.55228 15.4477 5 15.9999 5Z" fill="#1A1A1A"/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid grid-cols-12 mb-75">
+            <div class="col-span-7">
+                {% partial 'element/slider/product' %}
+            </div>
+            <div class="col-span-5">
+                <div>
+                    <div class="mb-20">
+                        <span class="text-5xl font-bold text-discount mr-20">€ <span class="product-price-discount-render">999</span></span>
+                        <span class="line-through text-3xl text-gray">€ <span class="line-through product-price-render">1200</span></span>
+                        <input class="product-price" type="hidden" name="prodcut_price" value="1200">
+                        <input class="product-price-discount" type="hidden" name="prodcut_price_discount" value="999">
+                    </div>
+                    <span class="mb-25">В наличии есть этот товар по уценке, <a href="#" class="text-link">Подробнее</a></span>
+                    <div class="flex items-center mb-25">
+                        <span class="mr-10 product-card_circle-check-icon"></span>
+                        <span>В наличии, доставка от 2 дней</span>
+                    </div>
+                    <p class="mb-25">
+                        Вместе с видеокартой GIGABYTE NVIDIA GeForce RTX 3090 вы сможете полностью погрузиться в события на экране и играть в современные игры.
+                    </p>
+                    <div class="border-b border-border pb-40 mb-40">
+                        <span class="mb-30">4 варианта, текущий — 3 вентилятора, Gigabyte </span>
+                        <div class="flex flex-wrap other-product-link-row">
+                            <div class="other-product-link-col">
+                                <a class="px-15 py-5 other-product-link rounded-5" href="#">3 вентилятора, GDDR6X, Gigabyte</a>
+                            </div>
+                            <div class="other-product-link-col">
+                                <a class="px-15 py-5 other-product-link rounded-5" href="#">2 вентилятора, GDDR6, MSI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="mr-20">Количество:</span>
+                            <input class="text-center product-quantity" type="number" data-product-price="1200" data-product-discount-price="999" value="1" min="1">
+                        </div>
+                        <div class="add-to-cart">
+                            {% partial 'element/button'
+                                icon = 'product-card__basket-icon'
+                                text = 'В корзину'
+                            %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-container mb-30">
+            <span class="text-2xl mb-50 font-medium">Эти товары часто покупают вместе</span>
+            <div class="flex">
+                <div class="mr-20 left-section">
+                    <div class="grid grid-cols-4 gap-10 text-sm">
+                        <div class="col-span-1">
+                            <div class="relative flex flex-col justify-between h-full px-20 py-15 border border-border related-card">
+                                <div class="flex justify-end">
+                                    <span class="flex justify-center items-center bg-topStrip rounded-circle plus-circle-icon">
+                                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.672 3.56H3.504V0.679999H6.128V3.56H8.96V6.072H6.128V9H3.504V6.072H0.672V3.56Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <picture class="flex items-center justify-center img-wrap">
+                                    <img src="{{ 'assets/img/png/related-product-1.png'|theme }}" alt="">
+                                </picture>
+                                <span class="font-medium">Видеокарта GIGABYTE NVIDIA GeForce RTX 3090, OC-24GD, 24ГБ, GDDR6X, OC, Ret</span>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div
+                                data-title="Модуль памяти AMD Radeon R7 Performance Series 8ГБ 2666"
+                                data-price="199"
+                                class="relative flex flex-col justify-between h-full px-20 py-15 border border-border related-card related-card-checkbox disabled">
+                                <div>
+                                    <span class="block text-2xl font-bold">€ 199</span>
+                                </div>
+                                <picture class="flex items-center justify-center img-wrap">
+                                    <img src="{{ 'assets/img/png/related-product-2.png'|theme }}" alt="">
+                                </picture>
+                                <div>
+                                    <span class="font-medium">Модуль памяти AMD Radeon R7 Performance Series 8ГБ 2666</span>
+                                    <button class="text-topStrip mt-10 hover:text-primary choice" disabled>Выберите альтернативу</button>
+                                </div>
+                                <button class="checkbox" disabled></button>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div
+                                data-title="Модуль памяти AMD Radeon R7 Performance Series 8ГБ 2666"
+                                data-price="199"
+                                class="relative flex flex-col justify-between h-full px-20 py-15 border border-border related-card related-card-checkbox">
+                                <div>
+                                    <span class="block text-2xl font-bold text-discount">€ 199</span>
+                                    <span class="text-sm text-gray line-through">€ 200</span>
+                                </div>
+                                <picture class="flex items-center justify-center img-wrap">
+                                    <img src="{{ 'assets/img/png/related-product-2.png'|theme }}" alt="">
+                                </picture>
+                                <div>
+                                    <span class="font-medium">Модуль памяти AMD Radeon R7 Performance Series 8ГБ 2666</span>
+                                    <button class="text-topStrip mt-10 hover:text-primary choice">Выберите альтернативу</button>
+                                </div>
+                                <button class="checkbox"></button>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div
+                                data-title="Модуль памяти AMD Radeon R7 Performance Series 8ГБ 2666"
+                                data-price="199"
+                                class="relative flex flex-col justify-between h-full px-20 py-15 border border-border related-card related-card-checkbox">
+                                <div>
+                                    <span class="block text-2xl font-bold">€ 199</span>
+                                </div>
+                                <picture class="flex items-center justify-center img-wrap">
+                                    <img src="{{ 'assets/img/png/related-product-2.png'|theme }}" alt="">
+                                </picture>
+                                <div>
+                                    <span class="font-medium">Модуль памяти AMD Radeon R7 Performance Series 8ГБ 2666</span>
+                                    <button class="text-topStrip mt-10 hover:text-primary choice">Выберите альтернативу</button>
+                                </div>
+                                <button class="checkbox"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 right-section">
+                    <form class="h-full flex flex-col justify-between">
+                        <div class="text-sm">
+                            <span class="mb-20">Дополнительные компоненты для вашего товара:</span>
+                            <div class="render-checkbox-container mb-35"></div>
+                        </div>
+                        <div>
+                            <div class="mb-25 text-sm">
+                                <div class="flex items-center justify-between">
+                                    <span>5% <span class="font-medium">Скидка</span></span>
+                                    <input class="total-discount" type="hidden" value="5">
+                                    <div>
+                                        <span class="line-through total-price-render"></span>
+                                        <span class="text-lg font-medium total-discount-price-render"></span>
+
+                                        <input class="total-price-input" type="hidden" name="total_price">
+                                        <input class="total-discount-price-input" type="hidden" name="total_discount_price">
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <span class="discount-item" data-discount="5">5% на аксессуары</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="product-card_circle-check-icon mr-10"></span>
+                                        <span>В наличии, доставка от 2 дней</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-end add-to-cart">
+                                {% partial 'element/button'
+                                    type = 'submit'
+                                    icon = 'product-card__basket-icon'
+                                    text = 'В корзину'
+                                %}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-lightGray product-page-nav">
+            <ul class="flex text-lg">
+                <li>
+                    <a href="#description">Описание</a>
+                </li>
+                <li>
+                    <a href="#advantages-and-disadvantages">Плюсы и минусы</a>
+                </li>
+                <li>
+                    <a href="#specifications">Характеристики</a>
+                </li>
+                <li>
+                    <a href="#reviews">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#similar-products">Похожие товары</a>
+                </li>
+                <li>
+                    <a href="#pc-assemblies">Сборки ПК с этим товаром</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="product-page-description">
+            <p>Вместе с видеокартой GIGABYTE NVIDIA GeForce RTX 3090 вы сможете полностью погрузиться в события на экране и играть в современные игры за счет мощного графического процессора и технологии DirectX 12 Ultimate. Данная модель имеет память объемом 24 Гб. Видеокарта не выйдет из строя за счет вентиляторов охлаждения и радиатора, которые полностью контролируют температурный режим и не допускают перегрев.</p>
+            <p>Видеокарта GIGABYTE NVIDIA GeForce RTX 3090 прослужит длительное время, исправно выполняя свои основные функции, за счет современных технологий, высококачественных материалов, профессиональной сборки и дополнительной защиты от механических повреждений. Установка не требует больших усилий и много времени, вся процедура занимает считанные минуты.</p>
+        </div>
+        <div class="grid grid-cols-12 gap-20">
+            <div class="col-span-6">
+                <span class="text-2xl font-medium mb-35">Плюсы и минусы</span>
+                <div class="grid grid-cols-2 gap-20">
+                    <div>
+                        {% for i in 0..7 %}
+                            <div class="flex border-t border-border py-20">
+                                <div>
+                                    <svg class="-mt-3 mr-15" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.408 13V7.696H0.176V6.28H5.408V0.975999H6.992V6.28H12.224V7.696H6.992V13H5.408Z" fill="#133FE3"/>
+                                    </svg>
+                                </div>
+                                <span>Мощная система охлаждения</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        {% for i in 0..7 %}
+                            <div class="flex border-t border-border py-20">
+                                <div>
+                                    <svg class="-mt-2 mr-15" width="8" height="3" viewBox="0 0 8 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.16 0.319999V2.336H0.176V0.319999H7.16Z" fill="#FF0000"/>
+                                    </svg>
+                                </div>
+                                <span>Большой размер</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-6">
+                <span class="text-2xl font-medium mb-35">Характеристики</span>
+                <ul class="pl-25 pt-20 border-t border-border">
+                    {% for i in 0..11 %}
+                        <li class="flex items-center mb-15">
+                            <div class="flex items-center w-1/2">
+                                <span class="mr-10">Интерфейс</span>
+                                {% partial 'element/popup-popper-info' %}
+                            </div>
+                            <span>PCI-E 4.0</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

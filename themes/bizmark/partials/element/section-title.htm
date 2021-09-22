@@ -1,0 +1,15 @@
+{% if tag == 'h1' %}
+<h1 class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</h1>
+{% elseif tag == 'h2' %}
+<h2 class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</h2>
+{% elseif tag == 'h3' %}
+<h3 class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</h3>
+{% elseif tag == 'h4' %}
+<h4 class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</h4>
+{% elseif tag == 'h5' %}
+<h5 class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</h5>
+{% elseif tag == 'h6' %}
+<h6 class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</h6>
+{% else %}
+<span class="block text-5xl py-65 font-medium leading-1 {% if center %}text-center{% endif %} section-title">{{ text }}</span>
+{% endif %}

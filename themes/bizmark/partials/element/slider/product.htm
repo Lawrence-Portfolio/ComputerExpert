@@ -1,0 +1,134 @@
+{% set products = [
+    { imgSrc: 'assets/img/png/product-slide-1.png'|theme, is_video: false },
+    { imgSrc: 'assets/img/png/product-slide-2.png'|theme, is_video: false },
+    { imgSrc: 'assets/img/png/product-slide-3.png'|theme, is_video: true },
+    { imgSrc: 'assets/img/png/product-slide-1.png'|theme, is_video: false },
+    { imgSrc: 'assets/img/png/product-slide-2.png'|theme, is_video: false },
+    { imgSrc: 'assets/img/png/product-slide-3.png'|theme, is_video: true }
+] %}
+
+<div class="flex product-slider-container">
+    <div class="flex relative py-40 product-slider-thumb-wrap">
+        <div class="swiper product-slider-thumb">
+            <div class="swiper-button-prev">
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.96144 8.26931L3.96144 1.88315L1.61374 3.83777C1.38476 4.02809 1.04484 3.99675 0.854513 3.76777C0.664187 3.53878 0.695527 3.19886 0.924513 3.00854L4.15528 0.316229C4.18098 0.298115 4.20798 0.281918 4.23605 0.267767C4.26297 0.267767 4.27913 0.267767 4.30605 0.230075C4.36779 0.205669 4.43351 0.19289 4.4999 0.192383C4.56628 0.19289 4.632 0.205669 4.69374 0.230075C4.72067 0.230075 4.73682 0.230075 4.76374 0.267767C4.79182 0.281918 4.81882 0.298115 4.84451 0.316229L8.07528 3.00854C8.19834 3.11104 8.26939 3.263 8.26913 3.42315C8.26937 3.54896 8.22556 3.67089 8.14528 3.76777C8.05399 3.87789 7.92263 3.94715 7.78019 3.96029C7.63775 3.97342 7.49594 3.92934 7.38605 3.83777L5.03836 1.88315L5.03836 8.26931C5.03836 8.56669 4.79728 8.80777 4.4999 8.80777C4.20251 8.80777 3.96144 8.56669 3.96144 8.26931Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="swiper-wrapper">
+                {% for item in products %}
+                    <div class="swiper-slide">
+                        <div class="relative h-full flex justify-center items-center slide-wrap">
+                            {% if item.is_video %}
+                                <div class="flex justify-center items-center rounded-circle bg-topStrip play-icon">
+                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.43051e-06 7.65688L1.43051e-06 1.34312C-0.000659466 0.834396 0.261117 0.370539 0.672851 0.150861C1.16121 -0.106214 1.73835 -0.0305445 2.15985 0.345822L5.59137 3.5027C5.8509 3.75337 6 4.11726 6 4.5C6 4.88274 5.8509 5.24663 5.59137 5.4973L2.15985 8.65418C1.73835 9.03054 1.16121 9.10621 0.672851 8.84914C0.261117 8.62946 -0.000659466 8.1656 1.43051e-06 7.65688Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            {% endif %}
+                            <picture>
+                                <img src="{{ item.imgSrc }}" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next">
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.03856 0.730695L5.03856 7.11685L7.38626 5.16223C7.61524 4.97191 7.95516 5.00325 8.14549 5.23223C8.33581 5.46122 8.30447 5.80114 8.07549 5.99146L4.84472 8.68377C4.81902 8.70188 4.79202 8.71808 4.76395 8.73223C4.73703 8.73223 4.72087 8.73223 4.69395 8.76992C4.63221 8.79433 4.56649 8.80711 4.5001 8.80762C4.43372 8.80711 4.368 8.79433 4.30626 8.76992C4.27933 8.76992 4.26318 8.76992 4.23626 8.73223C4.20818 8.71808 4.18118 8.70188 4.15549 8.68377L0.924717 5.99146C0.801657 5.88896 0.730611 5.737 0.730871 5.57685C0.730625 5.45104 0.774443 5.32911 0.854717 5.23223C0.946012 5.12211 1.07737 5.05285 1.21981 5.03971C1.36225 5.02658 1.50406 5.07066 1.61395 5.16223L3.96164 7.11685L3.96164 0.730695C3.96164 0.433311 4.20272 0.192233 4.5001 0.192233C4.79749 0.192233 5.03856 0.433311 5.03856 0.730695Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="product-slider-wrap">
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                {% set videoCount = 0 %}
+                {% for item in products %}
+                    <div class="swiper-slide">
+                        {% if item.is_video %}
+                            <button class="w-full video-modal-btn" data-video-count="{{ videoCount }}" data-video-id="bSAjm_7-_Uo">
+                                <div class="flex justify-center items-center rounded-circle bg-topStrip play-icon">
+                                    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.43051e-06 7.65688L1.43051e-06 1.34312C-0.000659466 0.834396 0.261117 0.370539 0.672851 0.150861C1.16121 -0.106214 1.73835 -0.0305445 2.15985 0.345822L5.59137 3.5027C5.8509 3.75337 6 4.11726 6 4.5C6 4.88274 5.8509 5.24663 5.59137 5.4973L2.15985 8.65418C1.73835 9.03054 1.16121 9.10621 0.672851 8.84914C0.261117 8.62946 -0.000659466 8.1656 1.43051e-06 7.65688Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <picture class="flex justify-center items-center">
+                                    <img class="product-image" src="{{ item.imgSrc }}" alt="">
+                                </picture>
+                            </button>
+                            {% set videoCount = videoCount + 1 %}
+                        {% else %}
+                            <div class="relative slide-wrap">
+                                <picture class="flex justify-center items-center">
+                                    <img class="product-image" src="{{ item.imgSrc }}" alt="">
+                                </picture>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{#<div class="grid grid-cols-12 ">#}
+{#    <div class="col-span-4">#}
+{#        <div class="swiper product-slider-thumb">#}
+{#            <div class="swiper-wrapper">#}
+{#                {% for i in 1..6 %}#}
+{#                    <div class="swiper-slide">#}
+{#                        <div class="slide-wrap">#}
+{#                            <picture>#}
+{#                                <img src="{{ 'assets/img/png/product-slide-1.png'|theme }}" alt="">#}
+{#                            </picture>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="swiper-slide">#}
+{#                        <div class="slide-wrap">#}
+{#                            <picture>#}
+{#                                <img src="{{ 'assets/img/png/product-slide-2.png'|theme }}" alt="">#}
+{#                            </picture>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="swiper-slide">#}
+{#                        <div class="slide-wrap">#}
+{#                            <picture>#}
+{#                                <img src="{{ 'assets/img/png/product-slide-3.png'|theme }}" alt="">#}
+{#                            </picture>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="col-span-8">#}
+{#        <div class="swiper product-slider">#}
+{#            <div class="swiper-wrapper">#}
+{#                {% for i in 1..6 %}#}
+{#                    <div class="swiper-slide">#}
+{#                        <div class="slide-wrap">#}
+{#                            <picture>#}
+{#                                <img src="{{ 'assets/img/png/product-slide-1.png'|theme }}" alt="">#}
+{#                            </picture>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="swiper-slide">#}
+{#                        <div class="slide-wrap">#}
+{#                            <picture>#}
+{#                                <img src="{{ 'assets/img/png/product-slide-2.png'|theme }}" alt="">#}
+{#                            </picture>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="swiper-slide">#}
+{#                        <div class="slide-wrap">#}
+{#                            <picture>#}
+{#                                <img src="{{ 'assets/img/png/product-slide-3.png'|theme }}" alt="">#}
+{#                            </picture>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}

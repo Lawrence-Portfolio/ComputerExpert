@@ -1,0 +1,26 @@
+title = "Видеокарта GIGABYTE NVIDIA GeForce RTX 3090 , OC-24GD, 24ГБ, GDDR6X, OC, Ret"
+url = "/catalog/category/card"
+layout = "default"
+==
+function onStart() {
+    $this->addCss(mix('css/catalog-card.css', 'themes/bizmark/assets'));
+    $this->addJs(mix('js/catalog-card.js', 'themes/bizmark/assets'));
+}
+
+==
+{% set links = [
+    {
+        title: 'Каталог',
+        url: 'catalog/categories'|page
+    },
+    {
+        title: 'Видеокарты',
+        url: 'catalog/category'|page
+    }
+] %}
+
+{% partial 'element/breadcrumbs' links=links %}
+{% partial 'element/page-title'
+    text = this.page.title
+%}
+{% partial 'pages/catalog/card' %}

@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <div class="grid grid-cols-11">
+            <div class="col-span-3">
+                {% partial 'catalog/product/filter' %}
+            </div>
+            <div class="col-span-8">
+                {% partial 'catalog/product/switch-product-list' %}
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Вы недавно смотрели'
+        %}
+        {% partial 'catalog/product/listing' %}
+    </div>
+</section>

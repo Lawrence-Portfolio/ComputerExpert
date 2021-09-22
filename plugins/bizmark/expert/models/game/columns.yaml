@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Название игры
+        searchable: true
+        sortable: true
+
+    cpu:
+        label: Процессор
+        type: partial
+        path: $/bizmark/expert/models/game/_content_cpu.htm
+
+    gpu:
+        lable: Видеокарта
+        type: partial
+        path: $/bizmark/expert/models/game/_content_gpu.htm

@@ -1,0 +1,49 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        label: Активность
+        type: switch
+        on: ВКЛ
+        off: ВЫКЛ
+        default: true
+
+    name:
+        label: Название игры
+        required: true
+
+    cpu:
+        label: Процессор
+        span: left
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать процессор
+        prompt: Нажмите что бы выбрать процессор
+        required: true
+
+    gpu:
+        label: Видеокарта
+        span: right
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать видеокарту
+        prompt: Нажмите что бы выбрать видеокарту
+        required: true
+
+    fps:
+        label: FPS
+        span: full
+        type: repeater
+        form:
+            fields:
+                resolution:
+                    label: Разрешение
+                    span: left
+
+                value:
+                    label: Значение
+                    span: right

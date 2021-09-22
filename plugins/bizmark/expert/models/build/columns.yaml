@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+
+    name:
+        label: Название
+        searchable: true
+        sortable: true
+
+    code:
+        label: Код сборки / SKU
+        searchable: true
+
+    slug:
+        label: Ссылка

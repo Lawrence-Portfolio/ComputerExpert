@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Название
+        searchable: true
+        sortable: true
+
+    user:
+        label: Пользователь
+        searchable: true
+        sortable: true
+
+    slug:
+        label: Ссылка

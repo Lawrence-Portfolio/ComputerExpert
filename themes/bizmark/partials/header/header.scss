@@ -1,0 +1,38 @@
+.header__search {
+    min-width: 445px;
+    input {
+        height: 40px;
+        padding-right: 45px;
+    }
+}
+.header__catalog-dropdown {
+    &:hover {
+        .header__catalog-menu {
+            visibility: visible;
+        }
+    }
+}
+.header__catalog-menu {
+    padding-top: 18px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    visibility: hidden;
+    &.show {
+        visibility: visible;
+    }
+    ul {
+        margin: 0 -22px;
+        max-height: 470px;
+        li {
+            padding: 0 22px;
+            min-width: 406px;
+            &:nth-child(7n) {
+                a {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

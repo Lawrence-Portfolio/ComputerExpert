@@ -1,0 +1,155 @@
+{% set catalog = [
+    {
+        name: 'Процессоры',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-1.svg'|theme
+    },
+    {
+        name: 'Охлаждение',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-2.svg'|theme
+    },
+    {
+        name: 'Материнские платы',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-3.svg'|theme
+    },
+    {
+        name: 'Аудиокарты',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-4.svg'|theme
+    },
+    {
+        name: 'Видеокарты',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-5.svg'|theme
+    },
+    {
+        name: 'Память',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-6.svg'|theme
+    },
+    {
+        name: 'SSD',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-7.svg'|theme
+    },
+    {
+        name: 'Жесткие диски',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-8.svg'|theme
+    },
+    {
+        name: 'Блоки питания',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-9.svg'|theme
+    },
+    {
+        name: 'Корпуса',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-10.svg'|theme
+    },
+    {
+        name: 'Сетевая карта',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-11.svg'|theme
+    },
+    {
+        name: 'Клавиатуры',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-12.svg'|theme
+    },
+    {
+        name: 'Мыши',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-13.svg'|theme
+    },
+    {
+        name: 'Аксессуары',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-14.svg'|theme
+    },
+    {
+        name: 'Мониторы',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-15.svg'|theme
+    },
+    {
+        name: 'Звуковые системы',
+        imgSrc: 'assets/img/svg/catalog/catalog-menu-16.svg'|theme
+    }
+] %}
+<header id="main-header">
+    <div class="py-10">
+        <div class="container">
+            <div class="flex items-end">
+                <a class="mr-30" href="{{ 'index'|page }}">
+                    <picture>
+                        <img class="-ml-15" src="{{ 'assets/img/logo.png'|theme }}" alt="Screenon">
+                    </picture>
+                </a>
+                <div class="flex flex-1 items-center mb-10">
+                    <div class="relative mr-65 header__search header__search-icon">
+                        <input type="text" placeholder="Search : Tempered Glass Gaming Case - Black ">
+                    </div>
+                    <div class="flex flex-1 justify-between">
+                        <div class="flex items-center">
+                            <span class="text-sm mr-30">Customer Support</span>
+                            <a class="relative pl-20 text-lg font-medium header__phone-icon" href="tel:+ 31 70 2140214">+ 31 70 2140214</a>
+                        </div>
+                        <div class="flex items-center">
+                            <a class="relative mr-10 pl-25 header__cart-icon" href="#">В корзине</a>
+                            <span class="flex justify-center items-center text-sm px-5 bg-topStrip header__cart-count rounded-5">100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-lightGray navigation py-15">
+        <div class="container">
+           <div class="flex justify-between">
+               <div class="relative flex items-center">
+                   <button class="mr-25 header__catalog-burger header__menu-icon"></button>
+                   <div class="header__catalog-dropdown">
+                       <a href="{{ 'catalog/categories'|page }}" class="pr-35 angle-down-icon">Категории</a>
+                       <div class="header__catalog-menu">
+                           <div class="bg-white pl-30 py-20 pr-115">
+                               <ul class="flex flex-col flex-wrap">
+                                   {% for item in catalog %}
+                                   <li>
+                                       <a href="{{ 'catalog/category'|page }}" class="flex py-15 items-center border-b border-darkGray">
+                                           <div class="flex w-35 h-35 mr-30 items-center justify-center">
+                                               <img src="{{ item.imgSrc }}" alt="{{ item.name }}">
+                                           </div>
+                                           <span>{{ item.name }}</span>
+                                       </a>
+                                   </li>
+                                   {% endfor %}
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <nav>
+                   <ul class="flex">
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium mr-60 hover:text-darkGray">Главная</a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="flex items-center text-lightBlack font-medium mr-60 hover:text-darkGray">
+                               <svg class="mr-10" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4555 9.15C14.4892 8.88333 14.5144 8.61667 14.5144 8.33333C14.5144 8.05 14.4892 7.78333 14.4555 7.51667L16.233 6.14167C16.393 6.01667 16.4352 5.79167 16.3341 5.60833L14.6492 2.725C14.5734 2.59167 14.4302 2.51667 14.2785 2.51667C14.228 2.51667 14.1775 2.525 14.1353 2.54167L12.0377 3.375C11.5996 3.04167 11.1279 2.76667 10.614 2.55833L10.2939 0.35C10.2686 0.15 10.0917 0 9.88109 0H6.51138C6.30078 0 6.12387 0.15 6.0986 0.35L5.77847 2.55833C5.26459 2.76667 4.79284 3.05 4.35478 3.375L2.25714 2.54167C2.20659 2.525 2.15605 2.51667 2.1055 2.51667C1.96229 2.51667 1.81908 2.59167 1.74326 2.725L0.0584067 5.60833C-0.0511086 5.79167 -0.000563072 6.01667 0.159498 6.14167L1.93702 7.51667C1.90332 7.78333 1.87805 8.05833 1.87805 8.33333C1.87805 8.60833 1.90332 8.88333 1.93702 9.15L0.159498 10.525C-0.000563072 10.65 -0.0426843 10.875 0.0584067 11.0583L1.74326 13.9417C1.81908 14.075 1.96229 14.15 2.11392 14.15C2.16447 14.15 2.21502 14.1417 2.25714 14.125L4.35478 13.2917C4.79284 13.625 5.26459 13.9 5.77847 14.1083L6.0986 16.3167C6.12387 16.5167 6.30078 16.6667 6.51138 16.6667H9.88109C10.0917 16.6667 10.2686 16.5167 10.2939 16.3167L10.614 14.1083C11.1279 13.9 11.5996 13.6167 12.0377 13.2917L14.1353 14.125C14.1859 14.1417 14.2364 14.15 14.287 14.15C14.4302 14.15 14.5734 14.075 14.6492 13.9417L16.3341 11.0583C16.4352 10.875 16.393 10.65 16.233 10.525L14.4555 9.15ZM8.19621 5C6.33446 5 4.82652 6.49167 4.82652 8.33333C4.82652 10.175 6.33446 11.6667 8.19621 11.6667C10.058 11.6667 11.5659 10.175 11.5659 8.33333C11.5659 6.49167 10.058 5 8.19621 5ZM6.51138 8.33333C6.51138 9.25 7.26956 10 8.19622 10C9.12288 10 9.88107 9.25 9.88107 8.33333C9.88107 7.41667 9.12288 6.66667 8.19622 6.66667C7.26956 6.66667 6.51138 7.41667 6.51138 8.33333Z" fill="currentColor"/>
+                               </svg>
+                               Конфигуратор ПК
+                           </a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium mr-60 hover:text-darkGray">Сборки ПК</a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium mr-60 hover:text-darkGray">Доставка и оплата</a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium mr-60 hover:text-darkGray">О нас</a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium mr-60 hover:text-darkGray">FAQ</a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium mr-60 hover:text-darkGray">Блог</a>
+                       </li>
+                       <li>
+                           <a href="{{ 'index'|page }}" class="text-lightBlack font-medium">Контакты</a>
+                       </li>
+                   </ul>
+               </nav>
+           </div>
+        </div>
+    </div>
+</header>

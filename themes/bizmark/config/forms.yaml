@@ -1,0 +1,13 @@
+tabs:
+    fields:
+        index:
+            tab: Главная страница
+            type: nestedform
+            usePanelStyles: true
+            form: '~/themes/bizmark/config/index/fields.yaml'
+
+        contacts:
+            tab: Контакты
+            type: nestedform
+            usePanelStyles: true
+            form: '~/themes/bizmark/config/contacts/fields.yaml'

@@ -1,0 +1,114 @@
+{% partial 'element/slider/hero' %}
+{% partial 'section/huge-selection' title=true %}
+{% partial 'section/configurator-banner'
+    bg_img_src = 'assets/img/jpg/configurator-banner-2.jpg'|theme
+%}
+<section>
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Огромный выбор сборок ПК'
+            center = true
+        %}
+        {% partial 'catalog/category/listing' %}
+        <div class="text-center">
+            {% partial 'element/button'
+                text = 'Все категории'
+            %}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Товары по акции'
+            center = true
+        %}
+        {% partial 'catalog/product/listing' %}
+        <a href="#" class="flex items-center bg-lightGray hover:no-underline watch-all-products">
+            <span class="bg-topStrip mr-25 watch-all__eye-w-icon"></span>
+            <div class="watch-all__angle-right-icon">
+                <span class="mr-5 text-lg">Смотреть все товары по акции</span>
+                <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.82967 4.97798L1.53809 8.80178C1.31058 9.06607 0.9427 9.06607 0.717613 8.80178L0.17063 8.16635C-0.0568766 7.90206 -0.0568766 7.47469 0.17063 7.21321L2.50378 4.50281L0.17063 1.79241C-0.0568766 1.52812 -0.0568766 1.10075 0.17063 0.839269L0.715193 0.198219C0.942699 -0.0660731 1.31058 -0.0660731 1.53567 0.198219L4.82725 4.02202C5.05718 4.28632 5.05718 4.71368 4.82967 4.97798Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+</section>
+<section class="pb-80">
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Рекомендуемое'
+            center = true
+        %}
+        {% partial 'catalog/product/listing' %}
+        <a href="#" class="flex items-center bg-lightGray hover:no-underline watch-all-products">
+            <span class="bg-topStrip mr-25 watch-all__eye-w-icon"></span>
+            <div class="watch-all__angle-right-icon">
+                <span class="mr-5 text-lg">Смотреть все рекомендуемые товары</span>
+                <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.82967 4.97798L1.53809 8.80178C1.31058 9.06607 0.9427 9.06607 0.717613 8.80178L0.17063 8.16635C-0.0568766 7.90206 -0.0568766 7.47469 0.17063 7.21321L2.50378 4.50281L0.17063 1.79241C-0.0568766 1.52812 -0.0568766 1.10075 0.17063 0.839269L0.715193 0.198219C0.942699 -0.0660731 1.31058 -0.0660731 1.53567 0.198219L4.82725 4.02202C5.05718 4.28632 5.05718 4.71368 4.82967 4.97798Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+</section>
+{% partial 'section/configurator-banner'
+    bg_img_src = 'assets/img/jpg/configurator-banner.jpg'|theme
+%}
+<section>
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Лидеры отзывов'
+            center = true
+        %}
+        {% partial 'catalog/product/listing' %}
+        <a href="#" class="flex items-center bg-lightGray hover:no-underline watch-all-products">
+            <span class="bg-topStrip mr-25 watch-all__eye-w-icon"></span>
+            <div class="watch-all__angle-right-icon">
+                <span class="mr-5 text-lg">Смотреть все позиции лидеры отзывов</span>
+                <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.82967 4.97798L1.53809 8.80178C1.31058 9.06607 0.9427 9.06607 0.717613 8.80178L0.17063 8.16635C-0.0568766 7.90206 -0.0568766 7.47469 0.17063 7.21321L2.50378 4.50281L0.17063 1.79241C-0.0568766 1.52812 -0.0568766 1.10075 0.17063 0.839269L0.715193 0.198219C0.942699 -0.0660731 1.31058 -0.0660731 1.53567 0.198219L4.82725 4.02202C5.05718 4.28632 5.05718 4.71368 4.82967 4.97798Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+</section>
+{% set blog_list = [
+    {
+        imgSrc: 'assets/img/jpg/blog-1.jpg'|theme,
+        title: 'Какую видеокарту можно купить в эру дефицита?'
+    },
+    {
+        imgSrc: 'assets/img/jpg/blog-2.jpg'|theme,
+        title: 'Игровые новинки — март 2021 года'
+    },
+    {
+        imgSrc: 'assets/img/jpg/blog-3.jpg'|theme,
+        title: 'Можно ли собрать новый игровой ПК за 50к?'
+    }
+] %}
+<section>
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Последние статьи'
+            center = true
+        %}
+        <div class="grid grid-cols-3 gap-20">
+            {% for item in blog_list %}
+                {% partial 'blog/card' item=item %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        {% partial 'element/section-title'
+            text = 'Вы недавно смотрели'
+            center = true
+        %}
+        {% partial 'catalog/product/listing' %}
+    </div>
+</section>
+{% partial 'section/brand-list' %}

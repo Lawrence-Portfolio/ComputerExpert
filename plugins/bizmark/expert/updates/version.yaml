@@ -1,0 +1,8 @@
+1.0.1: First version of Expert
+1.1.0:
+    - Tables created - Builds, Collections, Configs, Templates, Games
+    - create_builds_table.php
+    - create_collections_table.php
+    - create_configs_table.php
+    - create_games_table.php
+    - create_templates_table.php

@@ -1,0 +1,42 @@
+.swiper-horizontal {
+    .swiper-button-next, .swiper-button-prev {
+        position: absolute;
+        top: calc(50% - 33px / 2);
+        color: #fff;
+        cursor: pointer;
+        opacity: .35;
+        z-index: 2;
+        transition: all 150ms ease-in-out;
+        &:hover {
+            opacity: .5;
+        }
+    }
+    .swiper-button-next {
+        opacity: 0.35;
+        right: 50px;
+    }
+    .swiper-button-prev {
+        color: #fff;
+        left: 50px;
+    }
+}
+.swiper-pagination {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    z-index: 2;
+    .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        border: 2px solid #5B5B5B;
+        border-radius: 50%;
+        margin-right: 12px;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.swiper-pagination-bullet-active {
+            background-color: #5EA80D;
+        }
+    }
+}

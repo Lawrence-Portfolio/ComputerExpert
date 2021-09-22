@@ -1,0 +1,16 @@
+@import "../../partials/header/header";
+@import "../../partials/footer/footer";
+@import "../../partials/section/scss/configurator-banner";
+@import "../../partials/catalog/product/scss/card";
+@import "../../partials/catalog/category/scss/card";
+@import "../../partials/element/scss/breadcrumbs";
+@import "../../partials/catalog/product/scss/filter";
+@import "../../partials/catalog/product/scss/switch-product-list";
+@import "../../partials/element/scss/popup-popper-info";
+.page-title {
+    min-height: 100px;
+}
+input.product-quantity {
+    width: 90px;
+    height: 50px;
+}

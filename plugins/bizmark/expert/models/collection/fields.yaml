@@ -1,0 +1,35 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    template:
+        label: Шаблон
+        span: left
+        type: relation
+        required: true
+
+    build:
+        label: Сборка
+        span: right
+        type: recordfinder
+        list: ~/plugins/bizmark/expert/models/build/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать сборку
+        prompt: Нажмите что бы выбрать сборку
+        required: true
+
+    default:
+        label: Товар по-умолчанию
+        span: left
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать товар по умолчанию
+        prompt: Нажмите что бы выбрать товар
+        required: true
+
+    sort_order:
+        label: Сортировка
+        span: right
+        required: true

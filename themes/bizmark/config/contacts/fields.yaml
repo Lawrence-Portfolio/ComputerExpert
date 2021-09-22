@@ -1,0 +1,12 @@
+fields:
+    phone:
+        label: Контактный телефон
+        span: storm
+        cssClass: col-md-4
+        placeholder: +7 (999) 999-99-99
+
+    email:
+        label: E-mail
+        span: storm
+        cssClass: col-md-4
+        placeholder: email@domain.com

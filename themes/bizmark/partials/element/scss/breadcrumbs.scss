@@ -1,0 +1,29 @@
+.breadcrumbs__back-link {
+    border: 1px solid #E3EDFF;
+}
+.breadcrumbs {
+    ul {
+        li {
+            padding-right: 20px;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 5px / 2);
+                right: calc(10px - 5px / 2);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #96CD59;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+            a {
+
+            }
+        }
+    }
+}

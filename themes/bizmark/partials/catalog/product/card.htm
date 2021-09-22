@@ -1,0 +1,95 @@
+<div class="flex flex-col justify-between border-1 border-border rounded-2 px-15 py-20 product-card-col">
+    <div>
+        <div class="relative">
+            <picture class="flex justify-center mb-35 pt-20">
+                <img src="{{ product.imgSrc }}" alt="">
+            </picture>
+            {% if product.discount %}
+                <div class="absolute top-0 left-0 flex items-center">
+                    <span class="mr-10 product-card__discount-icon"></span>
+                    <span class="text-discount">sale</span>
+                </div>
+            {% endif %}
+            {% if product.best_price %}
+                <span class="flex items-center justify-center text-white rounded-5 font-extrabold text-sm product-card__best-price">Best price!</span>
+            {% endif %}
+            {% if product.most_popular %}
+                <span class="flex items-center justify-center text-white rounded-5 font-extrabold text-sm product-card__most-popular">SUPER HIT!</span>
+            {% endif %}
+        </div>
+        <a class="block text-lg font-medium" href="{{ 'catalog/card'|page }}">{{ product.title }}</a>
+        <div class="flex items-center">
+            <div class="flex items-center my-10">
+                {% for i in 1..5 %}
+                <div class="mr-5">
+                    {% if i <= product.rating %}
+                        <svg class="green-star" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.7066 13.8749C10.6 13.8754 10.4949 13.8487 10.4 13.797L6.99998 11.9058L3.59998 13.797C3.37474 13.9229 3.10171 13.9015 2.89627 13.7419C2.69082 13.5823 2.5888 13.3124 2.63331 13.0462L3.29998 9.05827L0.553314 6.22494C0.378685 6.03978 0.314571 5.7673 0.386648 5.51661C0.465477 5.25978 0.67493 5.07295 0.926648 5.03494L4.72665 4.44702L6.39998 0.813274C6.51137 0.568906 6.74443 0.413696 6.99998 0.413696C7.25553 0.413696 7.48859 0.568906 7.59998 0.813274L9.29331 4.43994L13.0933 5.02786C13.345 5.06587 13.5545 5.2527 13.6333 5.50952C13.7054 5.76021 13.6413 6.0327 13.4666 6.21786L10.72 9.05119L11.3866 13.0391C11.4352 13.3103 11.3312 13.5867 11.12 13.7474C10.9993 13.8373 10.8539 13.8822 10.7066 13.8749Z" fill="#96CD59"/>
+                        </svg>
+                    {% else %}
+                        <svg class="gray-star" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.4383 13.8749C11.325 13.8754 11.2133 13.8487 11.1125 13.797L7.49997 11.9058L3.88747 13.797C3.64815 13.9229 3.35806 13.9015 3.13978 13.7419C2.92149 13.5823 2.8131 13.3124 2.86039 13.0462L3.56872 9.05827L0.650389 6.22494C0.464845 6.03978 0.396724 5.7673 0.473305 5.51661C0.557062 5.25978 0.779605 5.07295 1.04706 5.03494L5.08456 4.44702L6.86247 0.813274C6.98082 0.568906 7.22845 0.413696 7.49997 0.413696C7.77149 0.413696 8.01912 0.568906 8.13747 0.813274L9.93664 4.43994L13.9741 5.02786C14.2416 5.06587 14.4641 5.2527 14.5479 5.50952C14.6245 5.76021 14.5563 6.0327 14.3708 6.21786L11.4525 9.05119L12.1608 13.0391C12.2124 13.3103 12.1019 13.5867 11.8775 13.7474C11.7492 13.8373 11.5948 13.8822 11.4383 13.8749Z" fill="#C4C4C4"/>
+                        </svg>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <span>( {{ product.rating }} )</span>
+            </div>
+            {% if product.discounted %}
+                <span class="flex items-center justify-center text-white text-xs rounded-10 ml-20 product-card__discounted">уцененный товар</span>
+            {% endif %}
+        </div>
+        <ul class="text-gray text-sm mb-20 product-card__list">
+            <li>Видеочипсет: <span class="font-medium">GTX 1660</span></li>
+            <li>Частота графич. проц.: <span class="font-medium">1530 МГц</span></li>
+            <li>Объем видеопамяти: <span class="font-medium">6 ГБ</span></li>
+            <li>Частота видеопамяти: <span class="font-medium">8000 МГц</span></li>
+        </ul>
+        <p class="text-sm">Культовая серия видеокарт Gaming с двухвентиляторным кулером возвращается!..</p>
+        <div>
+            <a class="text-link product-card__more-info-link" href="{{ product.link }}">Подробнее <span class="text-sm">»</span></a>
+        </div>
+    </div>
+    <div>
+        <div class="my-15">
+            {% if product.in_stock %}
+            <div class="flex items-center">
+                <span class="mr-10 product-card_circle-check-icon"></span>
+                <span class="text-gray text-xs">В наличии</span>
+            </div>
+            {% else %}
+            <div class="flex items-center">
+                <span class="rounded-circle bg-disabled mr-10 product-card__not-in-stock-icon"></span>
+                <span class="text-gray text-xs">НЕТ в наличии</span>
+            </div>
+            {% endif %}
+        </div>
+        <div class="mb-15">
+            {% if product.old_price %}
+                <span class="text-2xl font-bold {{ product.discount ? 'text-discount' : '' }} {{ product.in_stock ? '' : 'text-disabled' }}">€ 999.000</span>
+            {% endif %}
+            {% if product.new_price %}
+                <span class="text text-gray text-sm line-through ml-10">€ 1200</span>
+            {% endif %}
+        </div>
+        {% if product.in_stock %}
+            {% if product.in_cart %}
+                {% partial 'element/button'
+                    icon = 'product-card__white-circle-check'
+                    text = 'В корзине'
+                %}
+            {% else %}
+                {% partial 'element/button'
+                    icon = 'product-card__basket-icon'
+                    text = 'В корзину'
+                %}
+            {% endif %}
+        {% else %}
+            {% partial 'element/button'
+                text = 'Товар закончился'
+                icon = 'product-card__basket-icon'
+                is_disabled = true
+            %}
+        {% endif %}
+    </div>
+</div>

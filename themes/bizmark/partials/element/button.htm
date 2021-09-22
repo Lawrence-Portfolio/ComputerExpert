@@ -1,0 +1,24 @@
+{% if href %}
+    <a
+        href="href"
+        class="inline-block bg-primary text-white text-center rounded-5 hover:bg-primaryHover hover:no-underline transition primary-btn">
+        {{ text }}
+    </a>
+{% else %}
+    {% if icon %}
+        <button
+            type="{{ type ? type : 'button' }}"
+            class="flex items-center justify-center text-white rounded-5 transition primary-btn {{ is_disabled ? 'bg-disabled cursor-default' : 'bg-primary hover:bg-primaryHover' }}"
+            {{ is_disabled ? 'disabled' : '' }}>
+        <span class="mr-10 {{ icon }}"></span>
+        <span>{{ text }}</span>
+        </button>
+    {% else %}
+        <button
+            type="{{ type ? type : 'button' }}"
+            class="inline-block text-white rounded-5 transition primary-btn {{ is_disabled ? 'bg-disabled cursor-default' : 'bg-primary hover:bg-primaryHover' }}"
+            {{ is_disabled ? 'disabled' : '' }}>
+        {{ text }}
+        </button>
+    {% endif %}
+{% endif %}

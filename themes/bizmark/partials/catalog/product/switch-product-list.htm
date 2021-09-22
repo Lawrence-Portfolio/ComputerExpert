@@ -1,0 +1,42 @@
+<div class="switch-product-list">
+    <div class="flex justify-between items-center top-bar border-b border-border mb-15">
+        <div class="text-sm">
+            <span class="font-bold">Сортировка:</span>
+            <div class="dropdown">
+                <button class="relative pr-20 angle-down-icon dropdown-button">по возрастанию цены</button>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown-item"><a href="#">по убыванию цены</a></li>
+                        <li class="dropdown-item"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore id iste nisi tempore voluptas. Eligendi et laborum numquam odio! A cumque earum et laborum. Est iusto possimus qui sed tempore!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="mr-5 text-gray switch-list-button active" switch-toggle="row">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect opacity="0.01" x="24" y="24" width="24" height="24" transform="rotate(180 24 24)" fill="currentColor"/>
+                    <rect x="3" y="11" width="18" height="2" rx="0.95" fill="currentColor"/>
+                    <rect x="3" y="16" width="18" height="2" rx="0.95" fill="currentColor"/>
+                    <rect x="3" y="6" width="18" height="2" rx="0.95" fill="currentColor"/>
+                </svg>
+            </button>
+            <button class="text-gray switch-list-button" switch-toggle="col">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect opacity="0.01" width="24" height="24" fill="#767676"/>
+                    <path d="M9 3H5C3.89543 3 3 3.89543 3 5V9C3 10.1046 3.89543 11 5 11H9C10.1046 11 11 10.1046 11 9V5C11 3.89543 10.1046 3 9 3Z" fill="currentColor"/>
+                    <path d="M19 3H15C13.8954 3 13 3.89543 13 5V9C13 10.1046 13.8954 11 15 11H19C20.1046 11 21 10.1046 21 9V5C21 3.89543 20.1046 3 19 3Z" fill="currentColor"/>
+                    <path d="M9 13H5C3.89543 13 3 13.8954 3 15V19C3 20.1046 3.89543 21 5 21H9C10.1046 21 11 20.1046 11 19V15C11 13.8954 10.1046 13 9 13Z" fill="currentColor"/>
+                    <path d="M19 13H15C13.8954 13 13 13.8954 13 15V19C13 20.1046 13.8954 21 15 21H19C20.1046 21 21 20.1046 21 19V15C21 13.8954 20.1046 13 19 13Z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="product-list-row product-list-container" switch-data="row">
+        {% partial 'catalog/product/listing-row' %}
+    </div>
+    <div class="product-list-col product-list-container" switch-data="col" style="display: none">
+        {% partial 'catalog/product/listing-col' %}
+    </div>
+    {% partial 'element/pagination' %}
+</div>

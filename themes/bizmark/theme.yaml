@@ -1,0 +1,7 @@
+name: 'Computer Expert'
+description: 'Custom template for Computer Expert'
+author: 'Yuri Todosienko, Biz-Mark'
+homepage: 'http://biz-mark.ru'
+authorCode: 'Yuri Todosienko, Biz-Mark'
+code: 'bizmark'
+form: 'config/forms.yaml'

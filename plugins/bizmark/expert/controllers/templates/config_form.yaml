@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Template
+
+# Model Form Field configuration
+form: $/bizmark/expert/models/template/fields.yaml
+
+# Model Class name
+modelClass: Bizmark\Expert\Models\Template
+
+# Default redirect location
+defaultRedirect: bizmark/expert/templates
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bizmark/expert/templates/update/:id
+    redirectClose: bizmark/expert/templates
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bizmark/expert/templates
+    redirectClose: bizmark/expert/templates
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

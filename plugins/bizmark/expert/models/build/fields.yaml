@@ -1,0 +1,39 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        label: Активность
+        type: switch
+        on: ВКЛ
+        off: ВЫКЛ
+        default: true
+
+    name:
+        label: Название
+        span: left
+        required: true
+
+    slug:
+        label: Slug (заполняется автоматически)
+        span: right
+        required: true
+        preset:
+            field: name
+            type: slug
+
+    code:
+        label: Код сборки (SKU)
+        span: left
+        required: true
+
+    product:
+        label: Товар
+        span: right
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать товар
+        prompt: Нажмите что бы выбрать товар
+        required: true

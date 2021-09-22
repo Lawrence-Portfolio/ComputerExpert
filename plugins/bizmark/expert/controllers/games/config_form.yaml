@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Game
+
+# Model Form Field configuration
+form: $/bizmark/expert/models/game/fields.yaml
+
+# Model Class name
+modelClass: Bizmark\Expert\Models\Game
+
+# Default redirect location
+defaultRedirect: bizmark/expert/games
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bizmark/expert/games/update/:id
+    redirectClose: bizmark/expert/games
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bizmark/expert/games
+    redirectClose: bizmark/expert/games
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

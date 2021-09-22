@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Collection
+
+# Model Form Field configuration
+form: $/bizmark/expert/models/collection/fields.yaml
+
+# Model Class name
+modelClass: Bizmark\Expert\Models\Collection
+
+# Default redirect location
+defaultRedirect: bizmark/expert/collections
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bizmark/expert/collections/update/:id
+    redirectClose: bizmark/expert/collections
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bizmark/expert/collections
+    redirectClose: bizmark/expert/collections
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

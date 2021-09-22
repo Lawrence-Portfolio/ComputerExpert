@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    template:
+        label: Шаблон
+        type: partial
+        path: $/bizmark/expert/models/collection/_content_template.htm
+
+    build:
+        label: Сборка
+        type: partial
+        path: $/bizmark/expert/models/collection/_content_build.htm

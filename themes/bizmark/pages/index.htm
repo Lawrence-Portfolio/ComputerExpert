@@ -1,0 +1,10 @@
+title = "Главная страница"
+url = "/"
+layout = "default"
+==
+function onStart() {
+    $this->addCss(mix('css/index.css', 'themes/bizmark/assets'));
+    $this->addJs(mix('js/index.js', 'themes/bizmark/assets'));
+}
+==
+{% partial 'pages/index' %}

@@ -1,0 +1,205 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        label: Активность
+        type: switch
+        on: ВКЛ
+        off: ВЫКЛ
+        default: true
+
+    name:
+        label: Название
+        span: left
+
+    slug:
+        label: Slug (заполняется автоматически)
+        span: right
+        preset:
+            field: name
+            type: slug
+
+    code:
+        label: Код
+        span: auto
+
+    user:
+        label: Пользователь
+        span: auto
+        type: relation
+
+    cpu:
+        label: Процессор
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать процессор
+        prompt: Нажмите что бы выбрать процессор
+
+    motherboard:
+        label: Материнская плата
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать материнскую плату
+        prompt: Нажмите что бы выбрать материнскую плату
+
+    ram:
+        label: Оперативная память
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать оперативную память
+        prompt: Нажмите что бы выбрать оперативную память
+
+    cooling:
+        label: Система охлаждения процессора
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать систему охлаждения процессора
+        prompt: Нажмите что бы выбрать систему охлаждения процессора
+
+    gpu:
+        label: Видеокарта
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать видеокарту
+        prompt: Нажмите что бы выбрать видеокарту
+
+    disc:
+        label: Системный диск
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать системный диск
+        prompt: Нажмите что бы выбрать системный диск
+
+    coolers:
+        label: Дополнительные кулеры
+        span: full
+        type: repeater
+        form:
+            fields:
+                ad_item:
+                    label: Кулер
+                    span: full
+                    type: recordfinder
+                    list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+                    recordsPerPage: 10
+                    title: Выбрать доп. кулер
+                    prompt: Нажмите что бы выбрать доп. кулер
+
+    case:
+        label: Корпус
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать корпус
+        prompt: Нажмите что бы выбрать корпус
+
+    power:
+        label: Блок питания
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать блок питания
+        prompt: Нажмите что бы выбрать блок питания
+
+    additional_discs:
+        label: Дополнительные диски
+        span: full
+        type: repeater
+        form:
+            fields:
+                item:
+                    label: Диск
+                    span: full
+                    type: recordfinder
+                    list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+                    recordsPerPage: 10
+                    title: Выбрать доп. диск
+                    prompt: Нажмите что бы выбрать доп. диск
+
+    monitor:
+        label: Монитор
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать монитор
+        prompt: Нажмите что бы выбрать монитор
+
+    keyboard:
+        label: 
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать клавиатуру
+        prompt: Нажмите что бы выбрать клавиатуру
+
+    mouse:
+        label: Мышь
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать мышь
+        prompt: Нажмите что бы выбрать мышь
+
+    audio:
+        label: Аудио
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать аудиоустройство
+        prompt: Нажмите что бы выбрать аудиоустройство
+
+    microphone:
+        label: Микрофон
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать микрофон
+        prompt: Нажмите что бы выбрать микрофон
+
+    office_suite:
+        label: Пакет Офис
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать пакет "Офис"
+        prompt: Нажмите что бы выбрать пакет "Офис"
+
+    anitivirus:
+        label: Антивирус
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать антивирус
+        prompt: Нажмите что бы выбрать антивирус
+
+    os:
+        label: Операционная система
+        span: auto
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/product/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать операционную систему
+        prompt: Нажмите что бы выбрать операционную систему

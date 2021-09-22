@@ -1,0 +1,51 @@
+@import "./utils/icons";
+@import "./utils/slider";
+@import "./utils/button";
+@import "./utils/accordion";
+@import "./utils/form";
+.container {
+    margin: 0 auto;
+}
+body {
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    letter-spacing: -0.288889px;
+    font-weight: 400;
+}
+* {
+    outline: none;
+}
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+a, span, svg {
+    display: inline-block;
+}
+input {
+    height: 38px;
+    padding: 8px 14px;
+    color: #767676;
+    border: 1px solid #D2D2D2;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 100%;
+}
+.spacer {
+    flex-grow: 1;
+}
+.green-gradient {
+    background: linear-gradient(128.81deg, #96CD59 12.46%, #78A744 69.68%);
+    transition: all .2s ease-in-out;
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+.blue-gradient {
+    background: linear-gradient(128.81deg, #0045CB 12.46%, #133FE3 75.47%);
+    transition: all .2s ease-in-out;
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+

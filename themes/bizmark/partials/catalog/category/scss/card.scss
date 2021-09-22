@@ -1,0 +1,21 @@
+.category-card {
+    .angle-right {
+        opacity: 0;
+    }
+    &:hover {
+        .angle-right {
+            opacity: 1;
+        }
+    }
+    &:nth-child(even) {
+        &:hover {
+            background-color: #4F73F6;
+        }
+    }
+    &:nth-child(odd) {
+        &:hover {
+            background-color: #96CD59;
+
+        }
+    }
+}

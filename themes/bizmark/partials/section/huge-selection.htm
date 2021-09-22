@@ -1,0 +1,24 @@
+<section class="mb-80" id="huge-selection">
+    <div class="container">
+        {% if title %}
+        {% partial 'element/section-title'
+            text = 'Огромный выбор сборок ПК'
+            center = true
+        %}
+        {% endif %}
+        <div class="grid grid-cols-2 gap-20">
+            <a href="#" class="flex flex-col items-center justify-between hover:no-underline py-55 green-gradient">
+                <picture>
+                    <img src="{{ 'assets/img/png/pc-case-1.png'|theme }}" alt="">
+                </picture>
+                <span class="text-3xl text-white">Сборки от Computer Expert</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-between hover:no-underline py-55 blue-gradient">
+                <picture>
+                    <img src="{{ 'assets/img/png/pc-case-2.png'|theme }}" alt="">
+                </picture>
+                <span class="text-3xl text-white">Сборки от сообщества</span>
+            </a>
+        </div>
+    </div>
+</section>

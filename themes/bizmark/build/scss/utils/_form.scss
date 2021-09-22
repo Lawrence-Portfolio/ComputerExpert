@@ -1,0 +1,47 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.radio-group {
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        &:checked ~ label {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+    label {
+        padding-left: 35px;
+        &:after, &:before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+        &:before {
+            left: 0;
+            top: 1px;
+            width: 21px;
+            height: 21px;
+            border: 2px solid #133FE3;
+        }
+        &:after {
+            top: 5px;
+            left: 4px;
+            width: 13px;
+            height: 13px;
+            background-color: #133FE3;
+            opacity: 0;
+        }
+    }
+}

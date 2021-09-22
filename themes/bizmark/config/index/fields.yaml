@@ -1,0 +1,39 @@
+fields:
+    slider:
+        label: Cлайдер
+        span: storm
+        cssClass: col-md-12
+        type: repeater
+        prompt: Добавить слайд
+        form:
+            fields:
+                active:
+                    label: Активен?
+                    span: auto
+                    type: switch
+                    on: Да
+                    off: Нет
+                image:
+                    label: Изображение
+                    span: full
+                    type: mediafinder
+                    mode: image
+                    comment: Если оставить пустым, этот слайд не будет отображен
+                caption:
+                    label: Заголовок
+                    span: left
+                    placeholder: e.g. Вступай в игру!
+                description:
+                    label: Краткое описание
+                    span: right
+                    placeholder: e.g. С 19 марта по 25 мая скидка на товары для геймеров до 45%!
+                button_text:
+                    label: Надпись на кнопке
+                    span: left
+                    placeholder: e.g. В игру!
+                    comment: Если оставить пустым, кнопка не будет отображена на этом слайде
+                button_link:
+                    label: Ссылка для кнопки
+                    span: right
+                    placeholder: e.g. /my-page
+                    comment: Если оставить пустым, кнопка не будет отображена на этом слайде

@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Название
+        span: left
+        required: true
+
+    category:
+        label: Категория
+        span: right
+        type: recordfinder
+        list: ~/plugins/lovata/shopaholic/models/category/columns.yaml
+        recordsPerPage: 10
+        title: Выбрать категорию
+        prompt: Нажмите что бы выбрать категорию
+        required: true
+
+    preview_image:
+        label: Изображение на превью
+        span: full
+        type: fileupload

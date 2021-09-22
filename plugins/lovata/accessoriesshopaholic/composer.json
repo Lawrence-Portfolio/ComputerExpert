@@ -1,0 +1,8 @@
+{
+    "name": "lovata/accessoriesshopaholic-plugin",
+    "type": "october-plugin",
+    "description": "Allows you to attach to the goods accessories of product",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

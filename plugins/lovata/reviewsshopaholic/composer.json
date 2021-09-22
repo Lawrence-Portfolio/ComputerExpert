@@ -1,0 +1,8 @@
+{
+    "name": "lovata/reviewsshopaholic-plugin",
+    "type": "october-plugin",
+    "description": "Reviews for the products of the catalog",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
